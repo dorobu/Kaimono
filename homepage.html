@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Kaimono</title>
+        <link rel="stylesheet" type="text/css" href="css/homepage.css">
+        <link href="https://fonts.googleapis.com/css2?family=NotoSans&Roboto&Arvo:wght@700&family=Dongle:wght@300&family=Montserrat:wght@500;700&family=Poppins:wght@600&family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link type="image/png" rel="icon" href="images/logo.png">
+    </head>
+    <body>
+        <!-- TOP NAVIGATION -->
+        <div class="topnav" id="myTopnav">
+            <div class="top-con">
+                <div class="shop-logo">
+                    <img src="images/kaimono.png">
+                </div>
+                <div class="search-bar-con">
+                    <div class="search-bar">
+                        <input class="input" type="text" placeholder="Search Kaimono">
+                    </div>
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="right-top-con">
+                    <div class="right-top-con-icons">
+                        <i class="bi bi-cart2"></i>
+                            <span class="count">0</span>
+                        <i class="fa fa-heart-o"></i>
+                            <span class="count">0</span>
+                    </div>
+                    <div class="topnav-dropdown">
+                        <div class="topnav-dropdown-con">
+                            <button class="topnav-dropbtn"> 
+                                <i class="bi bi-person"></i>
+                            </button>
+                            <div class="topnav-dropdown-list">
+                                <div class="sign-in">
+                                    <a href="#">Sign In</a>
+                                </div>
+                                <div class="login">
+                                    <a href="#">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-con">
+                <div class="dropdown">
+                    <div class="dropdown-con">
+                        <button class="dropbtn">All 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-list">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags & Pouches</a>
+                            <a href="#">Coats & Jackets</a>
+                            <a href="#">Cosmetics</a>
+                            <a href="#">Denims</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Heels & Boots</a>
+                            <a href="#">Pants & Trousers</a>
+                            <a href="#">Plus Size</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Skincare</a>
+                            <a href="#">Skirts</a>
+                            <a href="#">Sneakers</a>
+                            <a href="#">Women's Top</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-con-buttons">
+                    <a href="homepage.html">Home</a>
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Beauty</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDING BANNER -->
+        <div class="banner">
+            <div class="mySlides fade">
+                <img src="images/sb1.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb2.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb3.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb4.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb5.png">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            <div class="dot-con" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                 <span class="dot" onclick="currentSlide(3)"></span>
+                 <span class="dot" onclick="currentSlide(4)"></span>
+                 <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+
+        <script type="text/javascript">      
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+                       
+        <!-- CATEGORIES -->
+        <div class="category">
+            <div class="category-heading">
+                <h2>CATEGORIES</h2>
+                <span>ALL</span>
+            </div>
+            <div class="category-con">
+                <div class="top-category-con">
+                    <a href="accessories.html" class="category-box">
+                        <img src="images/categories/accessories.png" alt="accessories">
+                        <span>Accessories</span>
+                    </a>
+                    <a href="shoebag.html" class="category-box">
+                        <img src="images/categories/shoebag haha.png" alt="shoebag">
+                        <span>Shoes & Bags</span>
+                    </a>
+                    <a href="dresses.html" class="category-box">
+                        <img src="images/categories/dress.png" alt="dress">
+                        <span>Dresses</span>
+                    </a>
+                    <a href="menspolo.html" class="category-box">
+                        <img src="images/categories/menspolo.png" alt="menspolo">
+                        <span>Mens Polo</span>
+                    </a>
+                    <a href="jacket.html" class="category-box">
+                        <img src="images/categories/jacket.png" alt="jacket">
+                        <span>Jacket</span>
+                    </a>
+                </div>
+                <div class="bottom-category-con">
+                    <a href="bottoms.html" class="category-box">
+                        <img src="images/categories/bottom.png" alt="bottom">
+                        <span>Bottoms</span>
+                    </a>
+                    <a href="activewear.html" class="category-box">
+                        <img src="images/categories/activewear.png" alt="activewear">
+                        <span>Activewear</span>
+                    </a>
+                    <a href="personalcare.html" class="category-box">
+                        <img src="images/categories/shampoo.png" alt="shampoo">
+                        <span>Personal Care</span>
+                    </a>
+                    <a href="cosmetics.html" class="category-box">
+                        <img src="images/categories/make-up.png" alt="cosmetics">
+                        <span>Cosmetics</span>
+                    </a>
+                    <a href="groceries.html" class="category-box">
+                        <img src="images/categories/grocery.png" alt="grocery">
+                        <span>Groceries</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP PRODUCTS -->
+        <div class="top-prod">
+            <h2>TOP PRODUCTS</h2>
+            <div class="main-con">
+                <div class="prod-con">
+                    <div class="rank">1</div>
+                    <div class="inner-prod-con">
+                        <div class="img-con">
+                            <a href="top-prod1.html"><img src="images/products/1.png"></a>                             
+                        </div>
+                        <div class="prod-details">
+                            <div class="prod-name">Low-Neck Crop Textured Knitted Tee</div>
+                            <div class="price">₱170.00</div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i> 
+                            <span class="sold">27k sold</span>
+                        </div>
+                    </div>
+              
+                </div>
+                <div class="prod-con">
+                    <div class="rank">2</div>
+                    <div class="inner-prod-con">
+                        <div class="img-con">
+                            <a href="top-prod2.html"><img src="images/products/2.png"></a>
+                        </div>
+                        <div class="prod-details">
+                            <div class="prod-name">Embroidered Cartoon Frog Bucket Hat</div>
+                            <div class="price">₱129.00</div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i> 
+                            <span class="sold">18k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-con">
+                    <div class="rank">3</div>
+                    <div class="inner-prod-con">
+                        <div class="img-con">
+                            <a href="top-prod3.html"><img src="images/products/3.png"></a>
+                        </div>
+                        <div class="prod-details">
+                            <div class="prod-name">Halter Neck Trumpet Sleeve Mesh Top</div>
+                            <div class="price">₱325.00</div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-o"></i> 
+                            <span class="sold">14.8k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="prod-con">
+                    <div class="rank">4</div>
+                    <div class="inner-prod-con">
+                        <div class="img-con">
+                            <a href="top-prod4.html"><img src="images/products/4.png"></a>
+                        </div>
+                        <div class="prod-details">
+                            <div class="prod-name">Blue Collared Graphic Letter Jacket</div>
+                            <div class="price">₱890.00</div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i> 
+                            <span class="sold">9.6k sold</span>
+                        </div>
+                    </div>	
+                </div>
+                <div class="prod-con" id="prod-5">
+                    <div class="rank">5</div>
+                    <div class="inner-prod-con">
+                        <div class="img-con">
+                            <a href="top-prod5.html"><img src="images/products/5.png"></a>
+                        </div>
+                        <div class="prod-details">
+                            <div class="prod-name">Front Flounce Sleeve Layer Hem Dress</div>
+                            <div class="price">₱700.00</div>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                            <i class="fa fa-star-o"></i> 
+                            <span class="sold">5.32k sold</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="more-top-prod-con">
+                <span id="dots"></span><span id="more">
+                    <div class="prod-con">
+                        <div class="rank">6</div>
+                        <div class="inner-prod-con">
+                            <div class="img-con">
+                                <a href="top-prod6.html"><img src="images/products/6.png"></a>
+                            </div>
+                            <div class="prod-details">
+                                <div class="prod-name">New Balance 452 Chunky Trainers In White</div>
+                                <div class="price">₱6760.00</div>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-half-o"></i>
+                                <i class="fa fa-star-o"></i> 
+                                <span class="sold">4.8k sold</span>
+                            </div>
+                        </div>
+                    </div>
+                </span>                    
+            </div>
+            <button onclick="myFunction()" id="myBtn">VIEW LESS</i></button>
+        </div>
+
+        <script type="text/javascript">
+            function myFunction() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "VIEW MORE";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "VIEW LESS";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+        
+        <!-- DAILY DISCOVER DESKTOP -->
+        <div class="daily-prod">
+            <h2>Daily Discover</h2>
+            <div class="daily-main-con">
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod1.html"><img src="images/dailydiscover/1.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">BlueWow Super Quality 21 Finger Sleeve Gaming PUBG Mobile</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="price">₱500</div>
+                            <span class="daily-sold">7k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod2.html"><img src="images/dailydiscover/2.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">XB450 Extra Bass Stereo Over-the-Ear Headphones with Mic</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="price">₱600</div>
+                            <span class="daily-sold">105k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod3.html"><img src="images/dailydiscover/3.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Jujutsu Kaisen Anime T-Shirt White T-Shirt Oversized</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="price">₱750</div>
+                            <span class="daily-sold">10k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod4.html"><img src="images/dailydiscover/4.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Nike Elite Taslan Shorts for Men Unisex</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="price">₱150</div>
+                            <span class="daily-sold">420k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod5.html"><img src="images/dailydiscover/5.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Anti-shock Wireless Earphone Full Protective Case for Air-pods</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price">₱800</div>
+                            <span class="daily-sold">200k sold</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="daily-main-con">
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod6.html"><img src="images/dailydiscover/6.png" alt=""></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Fashion Vintage Watch for Unisex</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price">₱750</div>
+                            <span class="daily-sold">130k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod7.html"><img src="images/dailydiscover/7.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Men's Jogger Pants Plain Adult with Zippers</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price">₱550</div>
+                            <span class="daily-sold">80k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod8.html"><img src="images/dailydiscover/8.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Simple Studio Smiley Hat Double Sided Bucket Hat</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price">₱600</div>
+                            <span class="daily-sold">3.9k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod9.html"><img src="images/dailydiscover/9.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">Korean Fashion Ladies Slippers</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price">₱180</div>
+                            <span class="daily-sold">30.9k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con">
+                    <div class="daily-inner-prod-con">
+                        <div class="daily-img-con">
+                            <a href="daily-prod10.html"><img src="images/dailydiscover/10.png"></a>
+                        </div>
+                        <div class="daily-prod-details">
+                            <div class="daily-prod-name">NBA Basketball Jersey Short with Pocket</div>
+                            <div class="daily-cart-icon">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price">₱10000</div>
+                            <span class="daily-sold">35k sold</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DAILY DISCOVER MOBILE -->
+        <div class="daily-prod-res">
+            <h2>Daily Discover</h2>
+            <div class="daily-main-con-res">
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod1.html"><img src="images/dailydiscover/1.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">BlueWow Super Quality 21 Finger Sleeve Gaming...</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱500</div>
+                            <span class="daily-sold-res">7k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod2.html"><img src="images/dailydiscover/2.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">XB450 Extra Bass Stereo Over-the-Ear Headpho...</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱600</div>
+                            <span class="daily-sold-res">105k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod3.html"><img src="images/dailydiscover/3.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Jujutsu Kaisen Anime T-Shirt White T-Shirt Over...</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱750</div>
+                            <span class="daily-sold-res">10k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod4.html"><img src="images/dailydiscover/4.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Nike Elite Taslan Shorts for Men Unisex</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱150</div>
+                            <span class="daily-sold-res">420k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod5.html"><img src="images/dailydiscover/5.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Anti-shock Wireless Earphone Full Protectiv...</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱800</div>
+                            <span class="daily-sold-res">200k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod6.html"><img src="images/dailydiscover/6.png" alt=""></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Fashion Vintage Watch for Unisex</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱750</div>
+                            <span class="daily-sold-res">130k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod7.html"><img src="images/dailydiscover/7.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Men's Jogger Pants Plain Adult with Zippers</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱550</div>
+                            <span class="daily-sold-res">80k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod8.html"><img src="images/dailydiscover/8.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Simple Studio Smiley Hat Double Sided Bucket Hat</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱600</div>
+                            <span class="daily-sold-res">3.9k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod9.html"><img src="images/dailydiscover/9.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">Korean Fashion Ladies Slippers</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱180</div>
+                            <span class="daily-sold-res">30.9k sold</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="daily-prod-con-res">
+                    <div class="daily-inner-prod-con-res">
+                        <div class="daily-img-con-res">
+                            <a href="daily-prod10.html"><img src="images/dailydiscover/10.png"></a>
+                        </div>
+                        <div class="daily-prod-details-res">
+                            <div class="daily-prod-name-res">NBA Basketball Jersey Shorts with Pocket</div>
+                            <div class="daily-cart-icon-res">
+                                <i class="bi bi-cart2"></i>
+                                <i class="fa fa-heart-o"></i>
+                            </div>
+                            <div class="daily-price-res">₱300</div>
+                            <span class="daily-sold-res">35k sold</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ICONS -->
+        <div class="icons-prod">
+            <div class="icons-main-con">
+                <div class="icons-prod-con">
+                     <div class="icons-inner-prod-con">
+                        <div class="icons-img-con">
+                            <img src="images/dailydiscover/icons/1.png">
+                        </div>
+                        <div class="icons-prod-details">
+                            <div class="icons-prod-name"><strong>Free Delivery</strong><br>On all orders</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons-prod-con">
+                    <div class="icons-inner-prod-con">
+                        <div class="icons-img-con">
+                            <img src="images/dailydiscover/icons/2.png">
+                        </div>
+                        <div class="icons-prod-details">
+                            <div class="icons-prod-name"><strong>10 Days Returns</strong><br>Moneyback Guarantee</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons-prod-con">
+                    <div class="icons-inner-prod-con">
+                        <div class="icons-img-con">
+                            <img src="images/dailydiscover/icons/3.png">
+                        </div>
+                        <div class="icons-prod-details">
+                            <div class="icons-prod-name"><strong>Offer & Gifts</strong><br> On all orders </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="icons-prod-con">
+                    <div class="icons-inner-prod-con">
+                        <div class="icons-img-con">
+                            <img src="images/dailydiscover/icons/4.png">
+                        </div>
+                        <div class="icons-prod-details">
+                            <div class="icons-prod-name"><strong>Secure Payments</strong><br>Protected by KAIMONO</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-header">
+                <a href="homepage.html">KAIMONO</a>
+            </div>
+            <div class="footer-con">
+                <div class="left-footer-con">
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">ABOUT US
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <a href="#"><p>About KAIMONO</p></a>
+                                <a href="#"><p>Fashion Blog</p></a>
+                                <a href="#"><p>Careers</p></a>
+                                <a href="#"><p>Privacy Policy</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">HELP & SUPPORT
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <a href="#"><p>Shipping Info</p></a>
+                                <a href="#"><p>Return & Refund</p></a>
+                                <a href="#"><p>How to Order</p></a>
+                                <a href="#"><p>Order Tracking</p></a>
+                                <a href="#"><p>Size Guide</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">CUSTOMER CARE
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <a href="#"><p>Contact Us</p></a>
+                                <a href="#"><p>Payment Method</p></a>
+                                <a href="#"><p>Terms & Conditions</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">PAYMENT
+                                
+                            </button>
+                            <div class="footer-dropdown-content-img">
+                                <a href="#"><img src="images/paylog/1.png"></a>
+                                <a href="#"><img src="images/paylog/2.png"></a>
+                                <a href="#"><img src="images/paylog/3.png"></a>
+                                <a href="#"><img src="images/paylog/4.png"></a>
+                                <a href="#"><img src="images/paylog/5.png"></a>
+                                <a href="#"><img src="images/paylog/6.png"></a>
+                                <a href="#"><img src="images/paylog/7.png"></a>
+                                <a href="#"><img src="images/paylog/8.png"></a>
+                                <a href="#"><img src="images/paylog/9.png"></a>
+                            </div>
+                        </div>
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">LOGISTICS
+                                
+                            </button>
+                            <div class="footer-dropdown-content-img">
+                                <a href="#"><img src="images/paylog/10.png"></a>
+                                <a href="#"><img src="images/paylog/11.png"></a>
+                                <a href="#"><img src="images/paylog/12.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">FOLLOW US
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <hr>
+                    <p>© 2023 KAIMONO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

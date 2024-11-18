@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>Kaimono</title>
+        <link rel="stylesheet" type="text/css" href="css/categ.css">
+        <link href="https://fonts.googleapis.com/css2?family=NotoSans&Roboto&Arvo:wght@700&family=Dongle:wght@300&family=Montserrat:wght@500;700&family=Poppins:wght@600&family=Raleway:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link type="image/png" rel="icon" href="images/logo.png">
+    </head>
+    <body>
+        <!-- TOP NAVIGATION -->
+        <div class="topnav" id="myTopnav">
+            <div class="top-con">
+                <div class="shop-logo">
+                    <img src="images/kaimono.png">
+                </div>
+                <div class="search-bar-con">
+                    <div class="search-bar">
+                        <input class="input" type="text" placeholder="Search Kaimono">
+                    </div>
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="right-top-con">
+                    <div class="right-top-con-icons">
+                        <i class="bi bi-cart2"></i>
+                            <span class="count">0</span>
+                        <i class="fa fa-heart-o"></i>
+                            <span class="count">0</span>
+                    </div>
+                    <div class="topnav-dropdown">
+                        <div class="topnav-dropdown-con">
+                            <button class="topnav-dropbtn"> 
+                                <i class="bi bi-person"></i>
+                            </button>
+                            <div class="topnav-dropdown-list">
+                                <div class="sign-in">
+                                    <a href="#">Sign In</a>
+                                </div>
+                                <div class="login">
+                                    <a href="#">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-con">
+                <div class="dropdown">
+                    <div class="dropdown-con">
+                        <button class="dropbtn">All 
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-list">
+                            <a href="#">Accessories</a>
+                            <a href="#">Bags & Pouches</a>
+                            <a href="#">Coats & Jackets</a>
+                            <a href="#">Cosmetics</a>
+                            <a href="#">Denims</a>
+                            <a href="#">Dresses</a>
+                            <a href="#">Heels & Boots</a>
+                            <a href="#">Pants & Trousers</a>
+                            <a href="#">Plus Size</a>
+                            <a href="#">Shirts</a>
+                            <a href="#">Skincare</a>
+                            <a href="#">Skirts</a>
+                            <a href="#">Sneakers</a>
+                            <a href="#">Women's Top</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-con-buttons">
+                    <a href="homepage.html">Home</a>
+                    <a href="#">Women</a>
+                    <a href="#">Men</a>
+                    <a href="#">Beauty</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDING BANNER -->
+        <div class="banner">
+            <div class="mySlides fade">
+                <img src="images/sb1.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb2.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb3.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb4.png">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/sb5.png">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                
+            <div class="dot-con" style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                 <span class="dot" onclick="currentSlide(3)"></span>
+                 <span class="dot" onclick="currentSlide(4)"></span>
+                 <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>
+
+        <script type="text/javascript">      
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";
+              dots[slideIndex-1].className += " active";
+            }
+        </script>
+
+        <!-- CATEGORY SEC -->
+        <div class="category-sub">
+            <div class="category-sub-con">
+                <div class="category-sub-left-con">
+                    <div class="category-con">
+                        <div class="dropdown-categ">
+                            <div class="dropdown-con-categ">
+                                <button class="dropbtn-categ">
+                                    <i class="fa fa-list-ul"></i>Categories
+                                </button>
+                                <div class="dropdown-list-categ">
+                                    <a href="accessories.html">Accessories</a>
+                                    <a href="activewear.html">Activewear</a>
+                                    <a href="bottoms.html">Bottoms</a>
+                                    <a href="cosmetics.html">Cosmetics</a>
+                                    <a href="dresses.html">Dresses</a>
+                                    <a href="groceries.html">Groceries</a>
+                                    <a href="jacket.html">Jacket</a> 
+                                    <a href="menspolo.html">Mens Polo</a>
+                                    <a href="personalcare.html">Personal Care</a>
+                                    <a href="shoebag.html">Shoes & Bags</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="filter-con">
+                        <div class="dropdown-categ">
+                            <div class="dropdown-con-categ">
+                                <button class="dropbtn-categ">
+                                    <i class="bi bi-funnel"></i>Search Filter
+                                </button>
+                                <div class="dropdown-list-categ" id="fill">
+                                    <div class="sub-heading">By Category</div>
+                                    <p>
+                                        <input type="checkbox" name="box">Cereals (500)<br>
+                                        <input type="checkbox" name="box">Condiments (326)<br>
+                                        <input type="checkbox" name="box">Syrups (440)<br>
+                                        <input type="checkbox" name="box">Pasta (223)<br>
+                                        <input type="checkbox" name="box">Instant (540)<br>
+                                        <input type="checkbox" name="box">Crackers (708)<br>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="category-sub-right-con">
+                   <div class="top-right-con">
+                        <div class="sorting-con">
+                            Sort By
+                            <button class="sort">Popular</button>
+                            <button class="sort">Latest</button>
+                            <button class="sort">Top Sales</button>
+                            <select class="sort-price">
+                                <option selected hidden>Price</option>
+                                <option value="2">Low to High</option>
+                                <option value="2">High to Low</option>
+                            </select>
+                        </div>
+                   </div> 
+
+                   <div class="category-prod-con">
+                        <div class="main-con">
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image1.webp">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Premier Protein Shake, Caramel</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱500</div>
+                                        <span class="sold">100 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image2.webp">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Original Donut Shop Keurig Single Pods</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱6100</div>
+                                        <span class="sold">2000 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image3.webp">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Maya All Purpose Flour 2KG</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱600</div>
+                                        <span class="sold">250 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image4.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Frito-Lay Snacks Variety Classic Mix, 35 Pack</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱15000</div>
+                                        <span class="sold">1234 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-con">
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image5.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Mott's Fruit Flavored Snacks, Assorted Fruit</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱500</div>
+                                        <span class="sold">100 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image6.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">40 Ruffles Potato Chips Variety Pack</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱6100</div>
+                                        <span class="sold">2000 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image7.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">OREO Original, OREO Golden, CHIPS AHOY!</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱600</div>
+                                        <span class="sold">250 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image8.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Betty Crocker Suddenly Pasta Salad</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱15000</div>
+                                        <span class="sold">1234 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main-con">
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image9.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Reese's Puffs and Cinnamon Toast Crunch</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱500</div>
+                                        <span class="sold">100 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image10.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Honey Nut Cheerios Heart Healthy Cereal</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱6100</div>
+                                        <span class="sold">2000 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image11.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">StarKist Premium White Chicken - 2.6 oz Pouch</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱600</div>
+                                        <span class="sold">250 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod-con">
+                                <div class="inner-prod-con">
+                                    <div class="img-con">
+                                        <img src="images/groceries/image12.jpg">
+                                    </div>
+                                    <div class="prod-details">
+                                        <div class="prod-name">Nature Valley Granola Bars, Sweet n' Salty Nut</div>
+                                        <div class="cart-icon">
+                                            <i class="bi bi-cart2"></i>
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                        <div class="price">₱15000</div>
+                                        <span class="sold">1234 sold</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            <div class="footer-header">
+                <a href="homepage.html">KAIMONO</a>
+            </div>
+            <div class="footer-con">
+                <div class="left-footer-con">
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">ABOUT US
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <a href="#"><p>About KAIMONO</p></a>
+                                <a href="#"><p>Fashion Blog</p></a>
+                                <a href="#"><p>Careers</p></a>
+                                <a href="#"><p>Privacy Policy</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">HELP & SUPPORT
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <a href="#"><p>Shipping Info</p></a>
+                                <a href="#"><p>Return & Refund</p></a>
+                                <a href="#"><p>How to Order</p></a>
+                                <a href="#"><p>Order Tracking</p></a>
+                                <a href="#"><p>Size Guide</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">CUSTOMER CARE
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <a href="#"><p>Contact Us</p></a>
+                                <a href="#"><p>Payment Method</p></a>
+                                <a href="#"><p>Terms & Conditions</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">PAYMENT
+                                
+                            </button>
+                            <div class="footer-dropdown-content-img">
+                                <a href="#"><img src="images/paylog/1.png"></a>
+                                <a href="#"><img src="images/paylog/2.png"></a>
+                                <a href="#"><img src="images/paylog/3.png"></a>
+                                <a href="#"><img src="images/paylog/4.png"></a>
+                                <a href="#"><img src="images/paylog/5.png"></a>
+                                <a href="#"><img src="images/paylog/6.png"></a>
+                                <a href="#"><img src="images/paylog/7.png"></a>
+                                <a href="#"><img src="images/paylog/8.png"></a>
+                                <a href="#"><img src="images/paylog/9.png"></a>
+                            </div>
+                        </div>
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">LOGISTICS
+                                
+                            </button>
+                            <div class="footer-dropdown-content-img">
+                                <a href="#"><img src="images/paylog/10.png"></a>
+                                <a href="#"><img src="images/paylog/11.png"></a>
+                                <a href="#"><img src="images/paylog/12.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="left-con">
+                        <div class="footer-dropdown">
+                            <button class="footer-dropbtn">FOLLOW US
+                                
+                            </button>
+                            <div class="footer-dropdown-content">
+                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-linkedin"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <hr>
+                    <p>© 2023 KAIMONO. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
